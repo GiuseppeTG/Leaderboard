@@ -1,8 +1,9 @@
 import './style.css';
-const { v4: uuidv4 } = require('uuid');
-import UI from './modules/ui';
+import UI from './modules/ui.js';
 
-let items = [
+const { v4: uuidv4 } = require('uuid');
+
+const items = [
   {
     name: 'Giuseppe',
     score: '100',
@@ -19,7 +20,7 @@ let items = [
     name: 'Monocuco10',
     score: '730',
     id: uuidv4(),
-  }
+  },
 ];
 
 const init = () => {
