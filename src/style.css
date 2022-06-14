@@ -1,4 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: rgb(191, 143, 39);
-  color: aliceblue;
+  background-color: blue;
+  color: greenyellow;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main {
+  border: dotted green 5px;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  max-width: 800px;
+}
+
+h1 {
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 40px;
+  font-size: 40px;
+  letter-spacing: 4px;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+form input {
+  width: 100%;
+  height: 30px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  margin-left: auto;
+}
+
+.list-container {
+  border: blue solid 1px;
+  min-width: 300px;
+  padding: 10px;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.scores-list {
+  list-style: none;
+}
+
+.scores-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: red;
+  color: white;
+}
+
+.scores-list li:nth-child(odd) {
+  background-color: yellow;
+  color: black;
+}
+
+.form-container {
+  min-width: 300px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 20px;
+  }
+
+  .form-container {
+    border-bottom: white solid 2px;
+    padding-bottom: 30px;
+  }
+
+  .form-container,
+  .list-container {
+    width: 100%;
+    max-width: 400px;
+  }
 }
