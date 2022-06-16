@@ -12,17 +12,13 @@ const form = document.querySelector('.form');
 
 // FUNCTIONS
 
-async function refreshScores() {
+const refreshScores = async () => {
   const data = await APIScores.getScores(apiUrl, gameId);
   scoresList.innerHTML = '';
   data.forEach((item) => UI.renderScoreList(item));
 }
 
 // EVENT LISTENERS
-
-document.addEventListener('DOMContentLoaded', async () => {
-  refreshScores();
-});
 
 form.addEventListener('submit', () => {
   const user = nameInput.value;
