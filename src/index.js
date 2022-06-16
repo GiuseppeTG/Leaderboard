@@ -3,7 +3,7 @@ import UI from './modules/ui.js';
 import APIScores from './modules/API';
 
 const apiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api';
-const gameId = 'RVihxLq2fEFCBIAf1cvF';
+const gameId = 'ewg5IotOpaSFHt0HGmPt';
 const scoresList = document.querySelector('.scores-list');
 const scoreInput = document.querySelector('#score-input');
 const nameInput = document.querySelector('#name-input');
