@@ -1,30 +1,33 @@
 import './style.css';
 import UI from './modules/ui.js';
+import APIScores from './modules/API.js';
 
-const { v4: uuidv4 } = require('uuid');
+const apiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api';
+const gameId = 'ewg5IotOpaSFHt0HGmPt';
+const scoresList = document.querySelector('.scores-list');
+const scoreInput = document.querySelector('#score-input');
+const nameInput = document.querySelector('#name-input');
+const refreshButton = document.querySelector('#refresh-button');
+const form = document.querySelector('.form');
 
-const items = [
-  {
-    name: 'Giuseppe',
-    score: '100',
-    id: uuidv4(),
-  },
+// FUNCTIONS
 
-  {
-    name: 'Monacho',
-    score: '12000000000000',
-    id: uuidv4(),
-  },
-
-  {
-    name: 'Monocuco10',
-    score: '730',
-    id: uuidv4(),
-  },
-];
-
-const init = () => {
-  items.forEach((item) => UI.getScoreList(item));
+const refreshScores = async () => {
+  const data = await APIScores.getScores(apiUrl, gameId);
+  scoresList.innerHTML = '';
+  data.forEach((item) => UI.renderScoreList(item));
 };
 
-init();
+// EVENT LISTENERS
+
+form.addEventListener('submit', () => {
+  const user = nameInput.value;
+  const score = scoreInput.value;
+  APIScores.setScore(user, score, gameId, apiUrl);
+  nameInput.value = '';
+  scoreInput.value = '';
+});
+
+refreshButton.addEventListener('click', () => {
+  refreshScores();
+});

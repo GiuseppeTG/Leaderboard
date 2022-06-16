@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js',
+    index: ['@babel/polyfill', './src/index.js'],
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -32,4 +32,8 @@ module.exports = {
     },
     ],
   },
+  experiments: {
+    topLevelAwait: true,
+  },
+
 };
