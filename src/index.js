@@ -20,6 +20,10 @@ const refreshScores = async () => {
 
 // EVENT LISTENERS
 
+document.addEventListener('DOMContentLoaded', () => {
+  refreshScores();
+});
+
 form.addEventListener('submit', () => {
   const user = nameInput.value;
   const score = scoreInput.value;
