@@ -16,7 +16,7 @@ const refreshScores = async () => {
   const data = await APIScores.getScores(apiUrl, gameId);
   scoresList.innerHTML = '';
   data.forEach((item) => UI.renderScoreList(item));
-}
+};
 
 // EVENT LISTENERS
 
