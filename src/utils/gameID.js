@@ -1,4 +1,4 @@
-fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/`, {
+fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
   method: 'POST',
   body: JSON.stringify({
     name: 'Space Hecatomb',

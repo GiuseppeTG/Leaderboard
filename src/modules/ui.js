@@ -1,7 +1,7 @@
 export default class UI {
   static renderScoreList = (item) => {
     const scoresList = document.querySelector('.scores-list');
-    
+
     const listedItem = document.createElement('li');
     listedItem.classList.add('listed-item');
 

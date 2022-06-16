@@ -1,6 +1,6 @@
 import './style.css';
 import UI from './modules/ui.js';
-import APIScores from './modules/API';
+import APIScores from './modules/API.js';
 
 const apiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api';
 const gameId = 'ewg5IotOpaSFHt0HGmPt';
@@ -10,7 +10,7 @@ const nameInput = document.querySelector('#name-input');
 const refreshButton = document.querySelector('#refresh-button');
 const form = document.querySelector('.form');
 
-//FUNCTIONS
+// FUNCTIONS
 
 async function refreshScores() {
   const data = await APIScores.getScores(apiUrl, gameId);
@@ -18,18 +18,19 @@ async function refreshScores() {
   data.forEach((item) => UI.renderScoreList(item));
 }
 
+// EVENT LISTENERS
 
-//EVENT LISTENERS
-
-document.addEventListener('DOMContentLoaded', async () =>{
+document.addEventListener('DOMContentLoaded', async () => {
   refreshScores();
 });
 
 form.addEventListener('submit', () => {
-  let user = nameInput.value;
-  let score = scoreInput.value;
+  const user = nameInput.value;
+  const score = scoreInput.value;
   APIScores.setScore(user, score, gameId, apiUrl);
-})
+  nameInput.value = '';
+  scoreInput.value = '';
+});
 
 refreshButton.addEventListener('click', () => {
   refreshScores();
