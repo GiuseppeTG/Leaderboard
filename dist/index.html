@@ -23,9 +23,9 @@
 
     <div class="form-container">
       <h2>Add your score</h2>
-      <form action="#">
-        <input type="text" class="score-input" id="name-input" placeholder="Enter your name">
-        <input type="text" class="score-input" id="score-input" placeholder="Enter your score">
+      <form class="form" action="#">
+        <input type="text" class="score-input" id="name-input" placeholder="Enter your name" maxlength="24" required>
+        <input type="number" class="score-input" id="score-input" placeholder="Enter your score" min="0" max="9999" required>
         <button type="submit" id="submit-button">Submit</button>
       </form>
     </div>
