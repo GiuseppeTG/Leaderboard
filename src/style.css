@@ -38,12 +38,24 @@ form {
 form input {
   width: 100%;
   height: 30px;
+  padding-left: 10px;
 }
 
 button {
+  border: orange solid 2px;
+  background-color: rgb(52, 159, 123);
   width: 100px;
   height: 40px;
   margin-left: auto;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  transition: all 1s;
+}
+
+button:hover {
+  background-color: blueviolet;
+  font-size: 18px;
 }
 
 .list-container {
