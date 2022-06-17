@@ -13,7 +13,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://giuseppetg.github.io/Leaderboard/dis)
+[Live Demo Link](https://giuseppetg.github.io/Leaderboard/dist)
 
 
 ## Getting Started
