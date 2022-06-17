@@ -54,7 +54,7 @@ button {
 }
 
 button:hover {
-  background-color: blueviolet;
+  background-color: rgb(139, 45, 227);
   font-size: 18px;
 }
 
