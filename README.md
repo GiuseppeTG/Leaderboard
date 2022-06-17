@@ -11,7 +11,7 @@
 - Frameworks
 - Technologies used: VSCode, Git/GitHub, Webpack
 
-## Live Demo (if available)
+## Live Demo
 
 [Live Demo Link](https://giuseppetg.github.io/Leaderboard/dist)
 
@@ -27,20 +27,6 @@ Run: `npm start`
 It will be deployed in your browser
 
 To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
 
 ## Authors
 
